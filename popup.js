@@ -35,9 +35,14 @@ function renderLinks(links) {
         const linkElement = document.createElement('div');
         linkElement.classList.add('link-item');
 
+        // Create link text container
+        const linkTextContainer = document.createElement('div');
+        linkTextContainer.style.width = 'calc(100% - 60px)'; // Adjust width as needed
+        linkTextContainer.style.display = 'inline-block';
+       
         // Shorten the name if it's too long
         const nameDisplay = item.name.length > 20 ? item.name.substring(0, 20) + '...' : item.name;
-
+        
         // Create link text
         const linkText = document.createElement('span');
         linkText.innerHTML = `<strong>${nameDisplay}</strong> | `;
@@ -45,17 +50,22 @@ function renderLinks(links) {
             // Open link in new tab
             chrome.tabs.create({ url: item.link });
         });
-        linkElement.appendChild(linkText);
+        linkTextContainer.appendChild(linkText);
 
         // Create delete button
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.classList.add('nes-btn', 'is-error', 'is-small', 'delete-button');
+        // Style the delete button
         deleteButton.addEventListener('click', function () {
             deleteLink(index);
         });
+        
+        // Append link text and delete button to link element
+        linkElement.appendChild(linkTextContainer);
         linkElement.appendChild(deleteButton);
 
+        // Append link element to links container
         linksContainer.appendChild(linkElement);
     });
 
