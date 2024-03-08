@@ -14,7 +14,7 @@ To use this Chrome extension, you need:
 Follow these steps to install the extension:
 
 1. **Download Extension ZIP File**: 
-   - Download the ZIP file of the extension from the [GitHub repository](link-to-your-repo).
+   - Download the ZIP file of the extension from the [GitHub repository]([link-to-your-repo](https://github.com/Imran-Ifty/web_site_name_manager/tree/main?tab=readme-ov-file)).
 
 2. **Extract ZIP File**:
    - Extract the contents of the ZIP file to a folder on your computer.
