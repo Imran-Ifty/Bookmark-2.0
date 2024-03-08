@@ -23,9 +23,22 @@ function saveLink(name, link) {
         });
     });
 }
+
+// Function to update badge text with the number of links
+function updateBadgeText() {
+    chrome.storage.sync.get('links', function (data) {
+        const links = data.links || [];
+        const numLinks = links.length;
+        chrome.browserAction.setBadgeText({ text: numLinks > 0 ? numLinks.toString() : '' });
+    });
+}
+
+// Listen for changes in storage and update badge text
 chrome.storage.onChanged.addListener(function (changes, namespace) {
     if (changes.links) {
-        const numLinks = changes.links.newValue.length;
-        chrome.browserAction.setBadgeText({ text: numLinks > 0 ? numLinks.toString() : '' });
+        updateBadgeText();
     }
 });
+
+// Initial update of badge text
+updateBadgeText();
