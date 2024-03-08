@@ -36,9 +36,13 @@ Follow these steps to install the extension:
    - Add, manage, and delete website links as needed.
    - Enjoy the convenience of managing your website list directly from your browser!
 
+## Keyboard Shortcut
+
+You can quickly save the current tab's address and name by pressing `Ctrl + Shift + K` from anywhere in the browser.
+
 ## Contributing
 
-Contributions to this project are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on [GitHub](link-to-your-repo).
+Contributions to this project are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on [GitHub](https://github.com/Imran-Ifty/web_site_name_manager ).
 
 ## License
 
