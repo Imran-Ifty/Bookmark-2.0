@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NES Website Links</title>
+  <link rel="stylesheet" href="https://nostalgic-css.github.io/NES.css/css/nes.min.css">
+  <style>
+    body {
+      padding: 10px;
+    }
+
+    .link-item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .link-text {
+      flex: 3;
+      font-weight: bold; /* Make website name bold */
+      cursor: pointer;
+    }
+
+    .delete-button {
+      flex: 1;
+      text-align: right;
+    }
+
+    .link-item:hover {
+      background-color: #e0e0e0; /* Grey background shade */
+    }
+
+    .link-item:hover .link-text {
+      text-decoration: underline;
+    }
+
+    /* Change cursor to pointer when hovering over the delete button */
+    .delete-button:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h3>Name | Link</h3>
+  <form id="linkForm">
+    <label for="nameInput">Name:</label>
+    <input type="text" id="nameInput" placeholder="Enter name">
+    <label for="linkInput">Website Link:</label>
+    <input type="text" id="linkInput" placeholder="Enter URL">
+    <button type="submit" id="addLinkButton" class="nes-btn is-primary">Add</button>
+  </form>
+  <div id="linksContainer"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
